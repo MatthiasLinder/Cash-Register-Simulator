@@ -1,0 +1,72 @@
+﻿<Window x:Class="Cash_Register_Simulator___20._03._2018.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cash_Register_Simulator___20._03._2018"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000" Closed="MainWindow_Closed">
+    <Grid>
+        <TextBox x:Name="InsertName" HorizontalAlignment="Left" Height="45" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="InsertPrice" HorizontalAlignment="Left" Height="45" Margin="120,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="AddToList" Content="Create" HorizontalAlignment="Left" Height="45" Margin="225,10,0,0" VerticalAlignment="Top" Width="50" Click="AddToList_Click"/>
+        <ListBox x:Name="ProductsAndPrices" HorizontalAlignment="Left" Height="350" Margin="20,60,0,0" VerticalAlignment="Top" Width="200">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Grid.Column="0" Text="{Binding Name}"/>
+                        <TextBlock  Grid.Column="1" Text="{Binding Price}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="ButtonGoUp" Content="Scroll Up" HorizontalAlignment="Left" Height="25" Margin="225,324,0,0" VerticalAlignment="Top" Width="50" FontSize="10" Click="ButtonGoUp_Click"/>
+        <Button x:Name="ButtonGoDown" Content="Scroll Down" HorizontalAlignment="Left" Height="25" Margin="225,354,0,0" VerticalAlignment="Top" Width="50" FontSize="8" Click="ButtonGoDown_Click"/>
+        <Button x:Name="DeleteButton" Content="DELETE" HorizontalAlignment="Left" Height="25" Margin="225,384,0,0" VerticalAlignment="Top" Width="50" Click="DeleteButton_Click"/>
+        <Button x:Name="AddToCart" Content="Add" HorizontalAlignment="Left" Height="135" Margin="225,69,0,0" VerticalAlignment="Top" Width="50" Click="AddToCart_Click"/>
+        <ListBox x:Name="ShoppingCartListBox" HorizontalAlignment="Left" Height="350" Margin="280,60,0,0" VerticalAlignment="Top" Width="200">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Grid.Column="0" Text="{Binding Name}"/>
+                        <TextBlock  Grid.Column="1" Text="{Binding Price}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="ButtonOne" Content="1" HorizontalAlignment="Left" Height="40" Margin="587,153,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonOne_Click"/>
+        <Button x:Name="ButtonTwo" Content="2" HorizontalAlignment="Left" Height="40" Margin="632,153,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonTwo_Click"/>
+        <Button x:Name="ButtonThree" Content="3" HorizontalAlignment="Left" Height="40" Margin="677,153,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonThree_Click"/>
+        <Button x:Name="ButtonFour" Content="4" HorizontalAlignment="Left" Height="40" Margin="587,195,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonFour_Click"/>
+        <Button x:Name="ButtonFive" Content="5" HorizontalAlignment="Left" Height="40" Margin="632,195,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonFive_Click"/>
+        <Button x:Name="ButtonSix" Content="6" HorizontalAlignment="Left" Height="40" Margin="677,195,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonSix_Click"/>
+        <Button x:Name="ButtonSeven" Content="7" HorizontalAlignment="Left" Height="40" Margin="587,240,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonSeven_Click"/>
+        <Button x:Name="ButtonEight" Content="8" HorizontalAlignment="Left" Height="40" Margin="632,240,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonEight_Click"/>
+        <Button x:Name="ButtonNine" Content="9" HorizontalAlignment="Left" Height="40" Margin="677,240,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonNine_Click"/>
+        <Button x:Name="ButtonZero" Content="0" HorizontalAlignment="Left" Height="40" Margin="632,285,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonZero_Click"/>
+        <TextBox x:Name="CalculatorScreen" HorizontalAlignment="Left" Height="75" Margin="587,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" IsEnabled="False"/>
+        <Button x:Name="RemoveFromCart" Content="Remove" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="347,10,0,0" Height="45" Click="RemoveFromCart_Click"/>
+        <Button x:Name="ButtonMinus" Content="-" HorizontalAlignment="Left" Height="40" Margin="587,343,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonMinus_Click"/>
+        <Button x:Name="ButtonPlus" Content="+" HorizontalAlignment="Left" Height="40" Margin="587,298,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonPlus_Click"/>
+        <Button x:Name="ButtonDivide" Content="/" HorizontalAlignment="Left" Height="40" Margin="677,298,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonDivide_Click"/>
+        <Button x:Name="ButtonMultiply" Content="*" HorizontalAlignment="Left" Height="40" Margin="677,343,0,0" VerticalAlignment="Top" Width="40" FontFamily="Engravers MT" FontSize="20" Click="ButtonMultiply_Click"/>
+        <Button x:Name="CalculatorExecute" Content="Execute" HorizontalAlignment="Left" Height="75" Margin="485,69,0,0" VerticalAlignment="Top" Width="97" FontFamily="Engravers MT" FontSize="14" Click="CalculatorExecute_Click"/>
+        <Button x:Name="CalculatorClear" Content="Clear" HorizontalAlignment="Left" Height="82" Margin="485,152,0,0" VerticalAlignment="Top" Width="97" FontFamily="Engravers MT" FontSize="20" Click="CalculatorClear_Click"/>
+        <Button x:Name="AddCartSum" Content="Sum into Calc." HorizontalAlignment="Left" Height="75" Margin="485,239,0,0" VerticalAlignment="Top" Width="97" FontFamily="Engravers MT" FontSize="9" Click="AddCartSum_Click"/>
+        <TextBox x:Name="TotalSum" HorizontalAlignment="Left" Height="82" Margin="816,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+        <Button x:Name="UndoButton" Content="Backspace" HorizontalAlignment="Left" Height="75" Margin="485,319,0,0" VerticalAlignment="Top" Width="97" FontFamily="Engravers MT" Click="UndoButton_Click"/>
+        <Button x:Name="InsertButton" Content="Enter into Register" HorizontalAlignment="Left" Height="33" Margin="506,31,0,0" VerticalAlignment="Top" Width="166" Click="InsertButton_Click" FontFamily="Engravers MT" FontSize="10"/>
+        <Button x:Name="CheckOut" Content="Check out" HorizontalAlignment="Left" Height="40" Margin="816,153,0,0" VerticalAlignment="Top" Width="166" FontFamily="Engravers MT" FontSize="15" Click="CheckOut_Click"/>
+        <TextBox x:Name="CashDisplay" HorizontalAlignment="Left" Height="41" Margin="890,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" IsEnabled="False"/>
+        <Button x:Name="AddCash" Content="100 €" HorizontalAlignment="Left" Height="39" Margin="890,241,0,0" VerticalAlignment="Top" Width="92" FontFamily="Engravers MT" FontSize="15" Click="AddCash_Click"/>
+
+    </Grid>
+</Window>
