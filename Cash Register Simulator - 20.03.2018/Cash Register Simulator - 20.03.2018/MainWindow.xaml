@@ -9,7 +9,7 @@
     <Grid>
         <TextBox x:Name="InsertName" HorizontalAlignment="Left" Height="45" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="InsertPrice" HorizontalAlignment="Left" Height="45" Margin="120,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="AddToList" Content="Create" HorizontalAlignment="Left" Height="45" Margin="225,10,0,0" VerticalAlignment="Top" Width="50" Click="AddToList_Click"/>
+        <Button x:Name="AddToList" Content="Create" HorizontalAlignment="Left" Height="45" Margin="280,10,0,0" VerticalAlignment="Top" Width="50" Click="AddToList_Click"/>
         <ListBox x:Name="ProductsAndPrices" HorizontalAlignment="Left" Height="350" Margin="20,60,0,0" VerticalAlignment="Top" Width="200">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -64,9 +64,21 @@
         <TextBox x:Name="TotalSum" HorizontalAlignment="Left" Height="82" Margin="816,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
         <Button x:Name="UndoButton" Content="Backspace" HorizontalAlignment="Left" Height="75" Margin="485,319,0,0" VerticalAlignment="Top" Width="97" FontFamily="Engravers MT" Click="UndoButton_Click"/>
         <Button x:Name="InsertButton" Content="Enter into Register" HorizontalAlignment="Left" Height="33" Margin="506,31,0,0" VerticalAlignment="Top" Width="166" Click="InsertButton_Click" FontFamily="Engravers MT" FontSize="10"/>
-        <Button x:Name="CheckOut" Content="Check out" HorizontalAlignment="Left" Height="40" Margin="816,153,0,0" VerticalAlignment="Top" Width="166" FontFamily="Engravers MT" FontSize="15" Click="CheckOut_Click"/>
-        <TextBox x:Name="CashDisplay" HorizontalAlignment="Left" Height="41" Margin="890,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" IsEnabled="False"/>
-        <Button x:Name="AddCash" Content="100 €" HorizontalAlignment="Left" Height="39" Margin="890,241,0,0" VerticalAlignment="Top" Width="92" FontFamily="Engravers MT" FontSize="15" Click="AddCash_Click"/>
+        <Button x:Name="CheckOut" Content="Check out" HorizontalAlignment="Left" Height="40" Margin="816,334,0,0" VerticalAlignment="Top" Width="166" FontFamily="Engravers MT" FontSize="15" Click="CheckOut_Click"/>
+        <TextBox x:Name="CashDisplay" HorizontalAlignment="Left" Height="41" Margin="816,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" IsEnabled="False"/>
+        <Button x:Name="AddCash" Content="100 €" HorizontalAlignment="Left" Height="39" Margin="908,378,0,0" VerticalAlignment="Top" Width="74" FontFamily="Engravers MT" FontSize="15" Click="AddCash_Click"/>
+        <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Left" Height="40" Margin="225,240,0,0" VerticalAlignment="Top" Width="50" Click="EditButton_Click"/>
+        <TextBlock x:Name="Receipt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Margin="816,97,0,0" Height="232" Width="166" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.262"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox x:Name="InsertTag" HorizontalAlignment="Left" Height="45" Margin="220,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
 
     </Grid>
 </Window>

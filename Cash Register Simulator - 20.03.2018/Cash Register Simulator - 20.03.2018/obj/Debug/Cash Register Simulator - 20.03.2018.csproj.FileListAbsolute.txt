@@ -43,3 +43,18 @@ C:\Users\HP\Desktop\C#\Cash Register Simulator - 20.03.2018\Cash Register Simula
 C:\Users\HP\Desktop\C#\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\C#\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.exe
 C:\Users\HP\Desktop\C#\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.pdb
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\bin\Debug\Cash Register Simulator - 20.03.2018.exe.config
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\bin\Debug\Cash Register Simulator - 20.03.2018.exe
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\bin\Debug\Cash Register Simulator - 20.03.2018.pdb
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\MainWindow.g.cs
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\App.g.cs
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018_MarkupCompile.cache
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018_MarkupCompile.lref
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\MainWindow.baml
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.g.resources
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash_Register_Simulator___20._03._2018.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.exe
+C:\Users\HP\Documents\GitHub\Cash-Register-Simulator\Cash Register Simulator - 20.03.2018\Cash Register Simulator - 20.03.2018\obj\Debug\Cash Register Simulator - 20.03.2018.pdb

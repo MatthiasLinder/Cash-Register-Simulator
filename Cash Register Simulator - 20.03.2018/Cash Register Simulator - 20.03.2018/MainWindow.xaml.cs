@@ -27,21 +27,19 @@ namespace Cash_Register_Simulator___20._03._2018
         //PRODUCT CLASS
         public class Product
         {
-            [XmlElement("title")]
-            public string Title { get; set; }
             [XmlElement("name")]
             public string Name { get; set; }
             [XmlElement("price")]
             public string Price { get; set; }
+            //[XmlAnyElement("tag")]
+            //public string Tag { get; set; }
         }
 
         //INITIALIZING THE LIST
         public List<Product> AList = new List<Product>()
         {
-            
+
         };
-
-
 
         public List<Product> ShoppingCart = new List<Product>();
         public string Calculator;
@@ -57,13 +55,9 @@ namespace Cash_Register_Simulator___20._03._2018
             CashDisplay.Text = Cash + " €";
 
             //// XML FILE READ/SAVE
-
-
-
             string fileName = "../../resources/products.xml";
             FileInfo f = new FileInfo(fileName);
             string fullname = f.FullName;
-
 
             var doc = new XDocument();
 
@@ -87,9 +81,29 @@ namespace Cash_Register_Simulator___20._03._2018
         {
             Cash = Cash - SUM;
             CashDisplay.Text = Cash + " €";
+
+            //Receipt
+
+            decimal VAT = (SUM / 100m) * 20m;
+
+            Receipt.Text = " Total Sum : " + SUM + " €" +
+                           "\n VAT : " + VAT + " €" + " //  20 % "+
+                           "\n" +
+                           "\n" +
+                           "\n" +
+                           "\n" +
+                           "\n" +
+                           "\n ------------------------------" +
+                           "\n Thank you for your purchase";
+
+            //
+
             SUM = 0;
             ShoppingCart.Clear();
             ShoppingCartListBox.Items.Refresh();
+            TotalSum.Clear();
+
+            
         }
 
         private void AddCash_Click(object sender, RoutedEventArgs e)
@@ -139,7 +153,13 @@ namespace Cash_Register_Simulator___20._03._2018
         //ADD TO PRODUCT LIST
         private void AddToList_Click(object sender, RoutedEventArgs e)
         {
-            AList.Add(new Product() { Name = InsertName.Text, Price = InsertPrice.Text});
+            //if (InsertTag.Text == "Yes")
+            //{
+            //    var Value = Int32.Parse(InsertPrice.Text);
+            //    var AddedRegulation = Value + ((Value / 100m) * 20m);
+            //    InsertPrice.Text = AddedRegulation.ToString();
+            //}
+            AList.Add(new Product() { Name = InsertName.Text, Price = InsertPrice.Text, /*Tag = InsertTag.Text*/ });
             
             ProductsAndPrices.ItemsSource = AList;
             ProductsAndPrices.Items.Refresh();
@@ -171,14 +191,26 @@ namespace Cash_Register_Simulator___20._03._2018
             ProductsAndPrices.SelectedIndex = nextIndex;
         }
 
+
+        //EDIT A PRODUCT IN PRODUCT LIST
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var item  = (Product)ProductsAndPrices.SelectedItem;
+            InsertName.Text = item.Name;
+            InsertPrice.Text = item.Price;
+            //InsertTag.Text = item.Tag;
+
+            AList.Remove((Product)ProductsAndPrices.SelectedItem);
+            ProductsAndPrices.Items.Refresh();
+        }
+
         //DELETE ITEM FROM PRODUCT LIST
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             AList.Remove((Product)ProductsAndPrices.SelectedItem);
             ProductsAndPrices.Items.Refresh();
         }
-
-        
 
         #endregion
 
@@ -269,9 +301,36 @@ namespace Cash_Register_Simulator___20._03._2018
             CalculatorScreen.Text = Calculator;
         }
 
+        private void AddCartSum_Click(object sender, RoutedEventArgs e)
+        {
+            Calculator += SUM.ToString();
+            CalculatorScreen.Text = Calculator;
+        }
+
         //
         //SYMBOLS//
         //
+
+        private void UndoButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Calculator.Length > 0 & Calculator.Contains(""))
+            {
+                if (Calculator.EndsWith(" + ") || Calculator.EndsWith(" - ") || Calculator.EndsWith(" / ") || Calculator.EndsWith(" * ") || Calculator.EndsWith(" "))
+                {
+                    Calculator = Calculator.Substring(0, Calculator.Length - 3);
+                    CalculatorScreen.Text = Calculator;
+                }
+                else
+                {
+                    Calculator = Calculator.Substring(0, Calculator.Length - 1);
+                    CalculatorScreen.Text = Calculator;
+                }
+            }
+            else if (Calculator.Length == 0 & Calculator != null)
+            {
+
+            }
+        }
 
         private void ButtonPlus_Click(object sender, RoutedEventArgs e)
         {
@@ -332,39 +391,7 @@ namespace Cash_Register_Simulator___20._03._2018
         }
 
         #endregion
-
-        private void AddCartSum_Click(object sender, RoutedEventArgs e)
-        {
-            Calculator += SUM.ToString();
-            CalculatorScreen.Text = Calculator;
-        }
-
-        private void UndoButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Calculator.Length > 0 & Calculator.Contains(""))
-            {
-                if (Calculator.EndsWith(" + ") || Calculator.EndsWith(" - ") || Calculator.EndsWith(" / ") || Calculator.EndsWith(" * ") || Calculator.EndsWith(" "))
-                {
-                    Calculator = Calculator.Substring(0, Calculator.Length - 3);
-                    CalculatorScreen.Text = Calculator;
-                }
-                else
-                {
-                    Calculator = Calculator.Substring(0, Calculator.Length - 1);
-                    CalculatorScreen.Text = Calculator;
-                }
-            }
-            else if (Calculator.Length == 0 & Calculator != null)
-            {
-
-            }
-        }
-
-        private void OnOff_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
+        
         private void MainWindow_Closed(object sender, EventArgs e)
         {
             string fileName = "../../resources/products.xml";

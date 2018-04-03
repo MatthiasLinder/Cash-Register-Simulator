@@ -1,23 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Product>
-    <name>Cornbread</name>
+    <name>Fish</name>
     <price>15</price>
   </Product>
   <Product>
-    <name>Pie</name>
-    <price>30</price>
-  </Product>
-  <Product>
-    <name>Milk</name>
-    <price>5</price>
-  </Product>
-  <Product>
-    <name>Whiskey</name>
-    <price>55</price>
-  </Product>
-  <Product>
     <name>Chips</name>
-    <price>10</price>
+    <price>25</price>
+  </Product>
+  <Product>
+    <name>Cream</name>
+    <price>15</price>
   </Product>
 </ArrayOfProduct>
